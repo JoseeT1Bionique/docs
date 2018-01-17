@@ -352,15 +352,13 @@ If you are using a "test pump" that has not received sufficient data in some tim
 
 ### A Note about Nightscout's COB Pill
 
-If you have the Advanced Meal Assist (AMA) OpenAPS feature turned on, OpenAPS calculates COB *dynamically*. To see your COB on your Nightscout web app, look inside the OpenAPS pill. _(If it says "undefined", this means you do NOT have AMA turned on.)_
+If you have the Advanced Meal Assist (AMA) OpenAPS feature turned on, OpenAPS calculates COB *dynamically*. 
+To see if you have AMA enable look inside the OpenAPS pill, if it says "undefined", this means you do NOT have AMA turned on. 
+If AMA is enable, you can add the Nightscout pill to see your dynamic COB decay on your Nightscout web app.  
 
-Nightscout, however, has its own COB pill, which decays carbs *statically*, and it is **NOT** used in OpenAPS calculations.
-
-* **We highly recommend NOT using the Nightscout COB pill.** We even recommend removing it from your Nightscout ENABLE web app settings as it causes bugs, and great confusion, because it will do a static decay and/or mess up your Nightscout. 
+Nightscout, however, has its own COB pill, which decays carbs *statically*, and it is **NOT** used in OpenAPS calculations (unless AMA is turne ON).
 
 * **Note also**: Nightscout's Bolus Wizard Preview (BWP) pill also decays carbs *statically*. 
-
-* **To avoid confusion: Turn off all other Nightscout pills that use *static* COB calculations.**
 
 ### How to display basal changes ("render basal")
 
